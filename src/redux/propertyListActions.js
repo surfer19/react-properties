@@ -24,11 +24,9 @@ export const fetchMoreProperties = (page) => {
                     country: 1,
                     adults: 1,
                     children: 0,
-                    page: 1
+                    page: page
                 }
-            })).data.data.properties;
-
-            console.log('response', response)
+            })).data.data.properties;            
 
             dispatch(fetchMoreSuccess(response))
 
